@@ -1,0 +1,10 @@
+<div class="my-2">
+	<label class="w-100">
+		User Name
+		<input type="text" class="form-control" (input)="updateUserName($event)">
+	</label>
+	<div [innerHTML] = "userName"></div>
+	<div> {{ userName }} </div>
+</div>
+<button type="button" class="btn btn-primary" (click)="changeUserStatus()">Change User Status</button>
+<h5>User Status: {{ userCreatedStatus }} </h5>
