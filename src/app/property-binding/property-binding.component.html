@@ -1,2 +1,6 @@
 <button type="button" class="btn btn-primary" [disabled]="!btn_enable_disable">Check Status</button>
 <h5> Button Status: <span [innerText]="btn_enable_disable"></span> </h5>
+<div *ngIf="btn_enable_disable; else btnDisabled">Button Enabled</div>
+<ng-template #btnDisabled>
+	<div>Button Disabled</div>
+</ng-template>

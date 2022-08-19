@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class EventBindingComponent implements OnInit {
 
 	userCreatedStatus: String = "Offline";
-	userName = "";
+	userName = ""; 
+	Email = ""; 
 
   constructor() { }
 
@@ -20,6 +21,7 @@ export class EventBindingComponent implements OnInit {
   }
 
   updateUserName(event: any) {
+  	console.log(event.target);
   	this.userName = event.target.value;
   }
 }

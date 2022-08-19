@@ -1,10 +1,17 @@
 <div class="my-2">
+	<h5>One Way Event Binding</h5>
 	<label class="w-100">
 		User Name
 		<input type="text" class="form-control" (input)="updateUserName($event)">
 	</label>
-	<div [innerHTML] = "userName"></div>
-	<div> {{ userName }} </div>
+	<h5 class="mt-2">Two Way Event Binding</h5>
+	<label class="w-100">
+		User Email
+		<input type="email" class="form-control" [(ngModel)]="Email">
+	</label>
+	<div>User Name: <span [innerHTML] = "userName"></span></div>
+	<div> User Email: {{ Email }} </div>
+	<!-- <div> {{ UsrEmail }} </div> -->
 </div>
 <button type="button" class="btn btn-primary" (click)="changeUserStatus()">Change User Status</button>
 <h5>User Status: {{ userCreatedStatus }} </h5>
